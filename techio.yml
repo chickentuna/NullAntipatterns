@@ -3,7 +3,13 @@ title : Java
 # Table of content
 plan:
   - title: Welcome # Set the page title
-    statement: markdowns/welcome.md # Set the file path to the page content
+    statement: markdowns/0_welcome.md # Set the file path to the page content
+  - title: Welcome # Set the page title
+    statement: markdowns/1_intro.md # Set the file path to the page content
+  - title: Welcome # Set the page title
+    statement: markdowns/2_null-is-bad.md # Set the file path to the page content
+  - title: Welcome # Set the page title
+    statement: markdowns/3_require-not-null.md # Set the file path to the page content
 #  - title: Another Page
 #    statement: markdowns/another-page.md
 

@@ -10,7 +10,7 @@ Why do not use empty type in the first place?
 We often initialize collection to null to represent a collction who doesn got data yet. So we can replace it by an instanciation.
 It prevent use of the runtinme exception and of the boring null check at every step of our code. Moreover each collection has a is empty method easy to manipulate.
 
-@[Replace the NULL initialisation of the list]({"stubs": ["/src/main/java/com/yourself/Optional.java"], "command": "com.yourself.DoNotUseNullTest#testDealWithList", "layout":"aside"})
+@[Replace the NULL initialisation of the list]({"stubs": ["/src/main/java/com/yourself/DoNotUseNull.java"], "command": "com.yourself.DoNotUseNullTest#testDealWithList", "layout":"aside"})
 
 ## Empty String
 
@@ -29,4 +29,4 @@ import org.apache.commons.lang3.StringUtils;
 public String name = StringUtils.EMPTY;
 ```
 
-@[Replace the NULL initialisation of the name]({"stubs": ["/src/main/java/com/yourself/Optional.java"], "command": "com.yourself.DoNotUseNullTest#testDealEmptyString", "layout":"aside"})
+@[Replace the NULL initialisation of the name]({"stubs": ["/src/main/java/com/yourself/DoNotUseNull.java"], "command": "com.yourself.DoNotUseNullTest#testDealEmptyString", "layout":"aside"})
