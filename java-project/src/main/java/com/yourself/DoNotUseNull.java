@@ -9,9 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DoNotUseNull {
-// }
 
-    private String name = StringUtils.EMPTY;
+
 
     public List<String> getNameList() {
         return nameList;
@@ -20,8 +19,13 @@ public class DoNotUseNull {
     public void setNameList(List<String> nameList) {
         this.nameList = nameList;
     }
+    // }
 
-    private List<String> nameList = new ArrayList<>();
+    private String name = null; //TODO replace me
+
+
+
+    private List<String> nameList = null; //TODO replace me
 
     public void dealWithEmptyList(){
         for(String name: nameList){
