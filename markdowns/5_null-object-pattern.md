@@ -6,6 +6,8 @@ In it's simplest form, the pattern consists of having an `interface` to represen
 
 @[Simple Null Object Pattern]({"stubs": ["src/main/java/com/yourself/NullObjectPattern.java"], "command": "com.yourself.NullObjectPatternTest#test"})*
 
+[comment]: <> (I do not know what to say or how to present the uml)
+
 [comment]: <> (https://sourcemaking.com/design_patterns/null_object)
 
 
