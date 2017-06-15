@@ -9,7 +9,7 @@ By requiring non-null values from the very start of a method's execution, you wi
 
 You may also attach a custom error message to the NPE by using Objects.requireNonNull.
 
-@[Objects.requireNonNull]({"stubs": ["src/main/java/com/yourself/NonNull.java"], "command": "com.yourself.NonNullTest#test"})*
+@[Use Objects.requireNonNull]({"stubs": ["src/main/java/com/yourself/NonNull.java"], "command": "com.yourself.NonNullTest#test"})*
 
 If you are a Guava user, you will have recognised this behaviour in [Guava's Preconditions.checkNotNull](http://google.github.io/guava/releases/snapshot/api/docs/com/google/common/base/Preconditions.html#checkNotNull-T-).
 

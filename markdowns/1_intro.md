@@ -20,21 +20,25 @@ A typical confusion situation:
 Man findABrotherInLawOf(Man user) {
     Man anyBrotherInLaw = null;
     Wife userWife = user.getWife();
+
     if (userWife != null) {
         List<Man> brothers = userWife.getBrothers();
+
         if (brothers != null) {
             Battery firstBrother = brothers.get(0);
+
             if (firstBrother != null) {
                 anyBrotherInLaw = firstBrother;
             }
         }
     }
+
     return anyBrotherInLaw;
 }
 ```
-So many nulls! And this code still has the potential to crash because of one. What if `user` turns out to be null? Should it be necessary to check the nullity of `brothers` ? Isn't there a simpler way to write this piece of code and make it easier to both maintanable and readable? 
+So many nulls! And this code still has the potential to crash because of a runtime null error. What if `user` turns out to be null? Should it be necessary to check if `brothers` is null? Isn't there a simpler way to write this piece of code and make it easier to both maintain and read? 
 
-Absolutely.
+*Absolutely.*
 
 The main issue with null is it's very existence. It doesn't even have a common semantical meaning. For example, what does null mean here?
 ```
@@ -45,4 +49,4 @@ phoneNumbers.get("Alice") // null, because Alice is unknown
 
 It wouldn't be so bad if the compiler could warn you when you risk a NullPointerException due to bad null handling. However, it will only ever crash at runtime and, more often than not, slap bang in the middle of some code very far away from the source of the problem.
 
-Let's take a look at how to avoid the more common null-based problems sorted by ascending complexity.
+Let's take a look at how to avoid the more common null-based problems 🐛.
