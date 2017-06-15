@@ -40,8 +40,8 @@ So many nulls! And this code still has the potential to crash because of a runti
 
 **Absolutely.**
 
-The main issue with null is it's very existence. It doesn't even have a common semantical meaning. For example, what does null mean here?
-```
+The main issue with null is its very existence. It doesn't even have a common semantical meaning. For example, what does null mean here?
+```java
 phoneNumbers.get("Bob") // 202-555-0167
 phoneNumbers.get("Ted") // null, because Ted has no phone
 phoneNumbers.get("Alice") // null, because Alice is unknown
