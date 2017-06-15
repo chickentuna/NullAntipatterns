@@ -6,7 +6,7 @@ In Java, the pattern consists of having an `interface` to represent the object y
 
 In the following example, an instance of `Tax` is created with a vat and a country, both received from a miniature database in `TaxFactory`. You must modify the method `getTaxByCountry` to return a passive `NullTax` instead of a null.
 
-![uml1](/markdowns/img/uml1.png, "NullObject Pattern UML example")
+![uml1](/markdowns/img/uml1.png)
 
 
 @[Simple NullObject Pattern]({"stubs": ["src/main/java/com/yourself/NullObjectPattern.java"], "command": "com.yourself.NullObjectPatternTest#test"})*
