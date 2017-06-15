@@ -10,9 +10,9 @@ plan:
     statement: markdowns/2_null-is-bad.md # Set the file path to the page content
   - title: Welcome # Set the page title
     statement: markdowns/3_require-not-null.md # Set the file path to the page content
-- title: Welcome # Set the page title
+  - title: Welcome # Set the page title
     statement: markdowns/4-optional.md # Set the file path to the page content
-    - title: Welcome # Set the page title
+  - title: Welcome # Set the page title
     statement: markdowns/5-null-object-pattern.md # Set the file path to the page content
 
 
