@@ -9,7 +9,7 @@ import java.util.List;
 public enum  Database {
 
     userDatabase;
-    
+
 
     private List<User> users;
     Database() {
