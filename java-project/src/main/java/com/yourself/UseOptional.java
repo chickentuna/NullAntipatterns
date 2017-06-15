@@ -22,14 +22,17 @@ public class UseOptional {
 
 
 
+
 	public Optional<User> getUserFromDatabase(String name){
-		return database.stream().filter(p -> p.getName().equals(name)).findFirst();
+		//TODO return an option of user, where the value is set to the user who has the name passed in parameters
+		return Optional.empty();
 	}
 
 
 
 	public Optional<String> getUserNameToUpperCaseFromDatabase(String name){
-		return getUserFromDatabase(name).map(x -> x.getName().toUpperCase());
+		//TODO return an option of user, where the value is set to the user name in capital letter, who has the name passed in parameters
+		return Optional.empty();
 	}
 
 
