@@ -6,12 +6,12 @@ In Java, the pattern consists of having an `interface` to represent the object y
 
 In the following example, an instance of `Tax` is created with a vat and a country, both received from a miniature database in `TaxFactory`. You must modify the method `getTaxByCountry` to return a passive `NullTax` instead of a null.
 
-![uml1](resources/uml1.png, "NullObject Pattern UML example")
+![uml1](img/uml1.png, "NullObject Pattern UML example")
 
 
 @[Simple NullObject Pattern]({"stubs": ["src/main/java/com/yourself/NullObjectPattern.java"], "command": "com.yourself.NullObjectPatternTest#test"})*
 
 In the cas where you want several _normal_ objects to inherit from your interface, you will want to  make `RealTax` abstract and have all the non-null objects inherit from it. This enforces the semantical difference between a `RealTax` and a `NullTax`.
 
-![uml2](resources/uml2.png, "Multiple Real classes")
+![uml2](img/uml2.png, "Multiple Real classes")
 
