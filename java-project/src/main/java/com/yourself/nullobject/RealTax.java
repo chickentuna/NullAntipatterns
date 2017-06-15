@@ -2,8 +2,8 @@
 package com.yourself.nullobject;
 // }
 public class RealTax implements Tax {
-    String country;
-    double vat;
+    String country; // to which country this tax applies 
+    double vat; // the VAT or (Value-added tax) of the country 
     
     public RealTax(String country, double vat) {
         this.country = country;

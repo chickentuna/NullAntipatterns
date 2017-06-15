@@ -8,7 +8,7 @@ You can check if the Optional contains a value with the `isPresent()` method.
 
 An instance of Optional can be created from a potentianally null object with the `ofNullable()` method.
 
-How is this helpful ? Well now you can perform an operation on your Optional object without needing to check if a value exists first by using the `map()` method.
+How is this helpful? Well, now you can perform an operation on your Optional object without needing to check if a value exists first by using the `map()` method.
 
 *Don't hesitate to check out [Optional in the javadoc](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html).*
 
@@ -16,6 +16,6 @@ Now try to solve the two exercises below.
 
 @[Solve the first TODO]({"stubs": ["src/main/java/com/yourself/UseOptional.java","src/main/java/com/yourself/Database.java", "src/main/java/com/yourself/User.java"], "command": "com.yourself.UseOptionalTest#findUserFromDatabasetest", "layout":"aside"})
 
-@[Solve the second TODO]({"stubs": ["src/main/java/com/yourself/UseOptional.java"], "command": "com.yourself.UseOptionalTest#findUserFromDatabasetest", "layout":"aside"})
+@[Solve the second TODO]({"stubs": ["src/main/java/com/yourself/UseOptional.java"], "command": "com.yourself.UseOptionalTest#findUserNameToCapitalLetter", "layout":"aside"})
 
-*Tip: the Stream API works very well with Optionals 😉*
+*Tip: the Stream API works very well with Optionals* 😉
