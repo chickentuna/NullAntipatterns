@@ -4,11 +4,11 @@ title : Avoiding Null Anti Patterns in Java
 plan:
   - title: Intro # Set the page title
     statement: markdowns/1_intro.md # Set the file path to the page content
-  - title: Null Alternatives  # Set the page title
+  - title: Alternatives to null  # Set the page title
     statement: markdowns/2_null-is-bad.md # Set the file path to the page content
-  - title: RequireNonNull # Set the page title
+  - title: Using requireNonNull()  # Set the page title
     statement: markdowns/3_require-not-null.md # Set the file path to the page content
-  - title: Optionals # Set the page title
+  - title: The Optional class # Set the page title
     statement: markdowns/4_optional.md # Set the file path to the page content
   - title: The Null Object Pattern # Set the page title
     statement: markdowns/5_null-object-pattern.md # Set the file path to the page content
