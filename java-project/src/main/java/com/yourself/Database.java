@@ -10,14 +10,6 @@ public enum  Database {
 
     userDatabase;
 
-  /* Class can be defined in a different file or defined here.
-     For example:
-  public static class Car {
-    public String name;
-    public String make;
-  }
-
-  */
 
     private List<User> users;
     Database() {
