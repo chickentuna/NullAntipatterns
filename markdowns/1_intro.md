@@ -38,7 +38,7 @@ Man findABrotherInLawOf(Man user) {
 ```
 So many nulls! And this code still has the potential to crash because of a runtime null error. What if `user` turns out to be null? Should it be necessary to check if `brothers` is null? Isn't there a simpler way to write this piece of code and make it easier to both maintain and read? 
 
-*Absolutely.*
+**Absolutely.**
 
 The main issue with null is it's very existence. It doesn't even have a common semantical meaning. For example, what does null mean here?
 ```
