@@ -5,12 +5,14 @@ import java.io.FileNotFoundException;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.yourself.nullobject.TaxFactory;
+
 public class NullObjectPatternTest {
 
     @Test
     public void test() throws FileNotFoundException {
         try {
-            boolean caughtNPE = false;
+
             try {
                 Assert.assertEquals("applyCountryTaxToPrice(50, 'Denmark')", 50 * 1.25,
                         NullObjectPattern.applyCountryTaxToPrice(50, "Denmark"), 0);
@@ -20,21 +22,32 @@ public class NullObjectPatternTest {
                         NullObjectPattern.applyCountryTaxToPrice(300, "USA"), 0);
                 Assert.assertEquals("applyCountryTaxToPrice(80, null)", 80,
                         NullObjectPattern.applyCountryTaxToPrice(80, null), 0);
-
-                Assert.assertEquals("getTaxByCountry('Denmark')", 50 * 1.25,
-                        NullObjectPattern.getTaxByCountry("Denmark").apply(50), 0);
-                Assert.assertEquals("getTaxByCountry('Italy')", 50 * 1.20,
-                        NullObjectPattern.getTaxByCountry("Italy").apply(50), 0);
-                Assert.assertEquals("getTaxByCountry('USA')", 50,
-                        NullObjectPattern.getTaxByCountry("USA").apply(50), 0);
-                Assert.assertEquals("getTaxByCountry(null)", 50,
-                        NullObjectPattern.getTaxByCountry(null).apply(50), 0);
-                
-
             } catch (NullPointerException e) {
-                caughtNPE = true;
+                Assert.fail("applyCountryTaxToPrice() threw a NullPointerException!");
             }
-            Assert.assertTrue("null handled?", !caughtNPE);
+            
+            try {
+                Assert.assertEquals("getTaxByCountry('Denmark')", 50 * 1.25,
+                        TaxFactory.getTaxByCountry("Denmark").apply(50), 0);
+                Assert.assertEquals("getTaxByCountry('Italy')", 50 * 1.20,
+                        TaxFactory.getTaxByCountry("Italy").apply(50), 0);
+                Assert.assertEquals("getTaxByCountry('USA')", 50,
+                        TaxFactory.getTaxByCountry("USA").apply(50), 0);
+                Assert.assertEquals("getTaxByCountry(null)", 50,
+                        TaxFactory.getTaxByCountry(null).apply(50), 0);
+
+                Assert.assertEquals("getTaxByCountry('Denmark')", "Denmark",
+                        TaxFactory.getTaxByCountry("Denmark").getCountry());
+                Assert.assertEquals("getTaxByCountry('Hungary')", "Hungary",
+                        TaxFactory.getTaxByCountry("Hungary").getCountry());
+                Assert.assertEquals("getTaxByCountry('USA')", "USA",
+                        TaxFactory.getTaxByCountry("USA").getCountry());
+                Assert.assertEquals("getTaxByCountry(null)", "COUNTRY UNKNOWN",
+                        TaxFactory.getTaxByCountry(null).getCountry());
+            } catch (NullPointerException e) {
+                Assert.fail("getTaxByCountry() threw a NullPointerException!");
+            }
+
             success(true);
 
         } catch (AssertionError ae) {

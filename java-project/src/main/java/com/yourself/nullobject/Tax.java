@@ -1,11 +1,12 @@
+// { autofold
 package com.yourself.nullobject;
-
+// }
 /**
- * A Tax object will perform an operation on a given price and return the new price.
- * 
- * Tax is a functional interace, which means it can be implemented by a simple lambda
+ * A Tax object contains the country for which the tax exists.
+ * The apply method performs an operation on a given price and returns the new price. * 
  */
 
 public interface Tax {
+    String getCountry();
     double apply(double price);
 }

@@ -2,6 +2,7 @@
 package com.yourself;
 
 import com.yourself.nullobject.Tax;
+import com.yourself.nullobject.TaxFactory;
 
 public class NullObjectPattern {
  // }
@@ -11,26 +12,9 @@ public class NullObjectPattern {
  * For all other countries, no changes to the price is made.
  */    
 public static double applyCountryTaxToPrice(double price, String country) {
-	Tax tax = getTaxByCountry(country);
+	Tax tax = TaxFactory.getTaxByCountry(country);
 	
 	return tax.apply(price);
-}
-
-public static Tax getTaxByCountry(String country) {
-    if ("Denmark".equals(country)) {
-        // The tax for Denmark add 25% to the price
-        return (price) -> {
-            return price * 1.25;
-        };
-    } else if ("Italy".equals(country)) {
-        // The tax for Italy add 20% to the price
-        return (price) -> {
-            return price * 1.20;
-        };
-    }
-    // This null might cause errors!
-    // Replace it with a special Tax object which does not modify the value of price.
-    return null;
 }
 //{ autofold
 }
