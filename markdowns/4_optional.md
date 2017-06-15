@@ -19,7 +19,7 @@ Optional can be created from nullable data with from nullable.
 Optional has a bunch of functional method:
 ```java
 Optional.ofNullable(object)	return an optional from a nullable object
-Optional.isPresent()			true if the value is setted
+Optional.isPresent()			true if the value is set
 option.map(x->x)				will applicate the predicate to the value of the option
 ```
 
