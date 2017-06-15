@@ -9,7 +9,7 @@ In the following example, an instance of `Tax` is created with a vat and a count
 ![uml1](/markdowns/img/uml1.png "NullObject Pattern UML example")
 
 
-@[Implement the Null Object Pattern]({"stubs": ["src/main/java/com/yourself/NullObjectPattern.java"], "command": "com.yourself.NullObjectPatternTest#test"})*
+@[Implement the Null Object Pattern]({"stubs": ["src/main/java/com/yourself/NullObjectPattern.java", "src/main/java/com/yourself/nullobject/TaxFactory.java", "src/main/java/com/yourself/nullobject/Tax.java", "src/main/java/com/yourself/nullobject/RealTax.java", "src/main/java/com/yourself/nullobject/NullTax.java"], "command": "com.yourself.NullObjectPatternTest#test"})*
 
 # Going further
 
