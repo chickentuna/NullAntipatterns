@@ -11,7 +11,8 @@ In the following example, an instance of `Tax` is created with a vat and a count
 
 @[Simple NullObject Pattern]({"stubs": ["src/main/java/com/yourself/NullObjectPattern.java"], "command": "com.yourself.NullObjectPatternTest#test"})*
 
-In the cas where you want several _normal_ objects to inherit from your interface, you will want to  make `RealTax` abstract and have all the non-null objects inherit from it. This enforces the semantical difference between a `RealTax` and a `NullTax`.
+# Going further
+
+In the case where you want several _normal_ objects to inherit from your interface, you will want to make the equivalent of `RealTax` abstract and have all the non-null objects inherit from it. This enforces the semantical difference between a `RealTax` and a `NullTax`.
 
 ![uml2](/markdowns/img/uml2.png "Multiple Real classes")
-
