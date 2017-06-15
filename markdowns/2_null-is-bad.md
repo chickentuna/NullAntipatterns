@@ -8,13 +8,13 @@ It's generally a better idea to use an empty type to initialize data, and yields
 
 
 ## Empty Collections
-We are frequently tempted to initialize a collection to null to represent the fact that it has not been given any data yet. Making it necessary to instantiate it at a liter time.
+We are frequently tempted to initialize a collection to null to represent the fact that it has not been given any data yet. Making it necessary to instantiate it at a later time.
 
-Why not instatiate it straight away?
+Why not instantiate it straight away?
 
-This will prevent a potential NullPointerException at runtime and free us of the chore to check if it is null before we try to access it. Moreover, every collection has an `ìsEmpty()` method which is as easy to manipulate as anything.
+This will prevent a potential NullPointerException at runtime and free us of the chore to check if it is null before we try to access it. Moreover, every collection has an `isEmpty()` method which is as easy to manipulate as anything.
 
-@[Replace the NULL initialisation of the list]({"stubs": ["/src/main/java/com/yourself/DoNotUseNull.java"], "command": "com.yourself.DoNotUseNullTest#testDealWithList", "layout":"aside"})
+@[Replace the NULL initialization of the list]({"stubs": ["/src/main/java/com/yourself/DoNotUseNull.java"], "command": "com.yourself.DoNotUseNullTest#testDealWithList", "layout":"aside"})
 
 ## Empty String
 
