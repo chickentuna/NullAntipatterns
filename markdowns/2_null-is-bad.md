@@ -19,7 +19,7 @@ This will prevent a potential NullPointerException at runtime and free us of the
 ## Empty String
 
 The other kind of data often initialized to null is `String`.
-But for the exact same reasons we should prefer to use an *empty string* to replace `null`.
+But for the exact same reasons we should prefer to use an **empty string** to replace `null`.
 
 If you want to make it as clear as possible, you can declare a constant in your code such as:
 ```Java

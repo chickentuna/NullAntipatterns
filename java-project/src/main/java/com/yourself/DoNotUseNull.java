@@ -23,8 +23,6 @@ public class DoNotUseNull {
 
     private String name = null; //TODO replace me
 
-
-
     private List<String> nameList = null; //TODO replace me
 
     public void dealWithEmptyList(){
