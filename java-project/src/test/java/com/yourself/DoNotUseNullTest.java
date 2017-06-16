@@ -12,15 +12,34 @@ public class DoNotUseNullTest {
     private DoNotUseNull doNotUseNull = new DoNotUseNull();
 
     @Test
-    public void testDealWithList(){
-        doNotUseNull.dealWithEmptyList();
-        Assert.assertNotNull(doNotUseNull.getNameList());
-        Assert.assertTrue(doNotUseNull.getNameList().isEmpty());
+    public void testDealWithList() {
+        try {
+            doNotUseNull.dealWithEmptyList();
+            Assert.assertNotNull(doNotUseNull.getNameList());
+            Assert.assertTrue(doNotUseNull.getNameList().isEmpty());
+        } catch (AssertionError ae) {
+            success(false);
+            msg("Oops! 🐞", ae.getMessage());
+
+        }
     }
 
     @Test
-    public void testDealEmptyString(){
-        String name = doNotUseNull.dealWithEmptyString();
-        Assert.assertEquals(StringUtils.EMPTY, name);
+    public void testDealEmptyString() {
+        try {
+            String name = doNotUseNull.dealWithEmptyString();
+            Assert.assertEquals(StringUtils.EMPTY, name);
+        } catch (AssertionError ae) {
+            success(false);
+            msg("Oops! 🐞", ae.getMessage());
+        }
+    }
+
+    private static void success(boolean success) {
+        System.out.println(String.format("TECHIO> success %s", success));
+    }
+
+    private static void msg(String channel, String msg) {
+        System.out.println(String.format("TECHIO> message --channel \"%s\" \"%s\"", channel, msg));
     }
 }
