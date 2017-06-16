@@ -4,7 +4,10 @@ It is sometimes possible to use a special Null Object to encapsulate the absence
 
 In Java, the pattern consists of having an `interface` to represent the object you wish to manipulate along with a *Real* implementation, which acts normally, and a *Null* implementation which can be used normally but will do nothing.
 
-In the following example, an instance of `Tax` is created with a vat and a country, both received from a miniature database in `TaxFactory`. You must modify the method `getTaxByCountry` to return a passive `NullTax` instead of a null.
+In the following example, an instance of `Tax` is created with a vat and a country, both received from a miniature database in `TaxFactory`. 
+
+* You must modify the method `getTaxByCountry` to return a passive `NullTax` instead of a null.
+* You must implement the `apply` method of the NullTax.
 
 ![uml1](/markdowns/img/uml1.png "NullObject Pattern UML example")
 

@@ -14,16 +14,16 @@ public class UseOptionalTest {
 
 
 	@Test
-	public void findUserFromDatabasetest()  {
-		Assert.assertTrue( useOptional.getUserFromDatabase("Nico").isPresent() );
-		Assert.assertEquals("CTO", useOptional.getUserFromDatabase("Nico").get().getStatus() );
-		Assert.assertFalse(useOptional.getUserFromDatabase("James").isPresent() );
+	public void findUserFromDatabasetest() {
+		Assert.assertTrue("Nico should be in the database.", useOptional.getUserFromDatabase("Nico").isPresent() );
+		Assert.assertEquals("What is Nico's status?", "CTO", useOptional.getUserFromDatabase("Nico").get().getStatus() );
+		Assert.assertFalse("James should not be in the database.", useOptional.getUserFromDatabase("James").isPresent() );
 	}
 
 	@Test
-	public void findUserNameToCapitalLetter(){
-		Assert.assertTrue(useOptional.getUserNameToUpperCaseFromDatabase("Val").isPresent());
-		Assert.assertEquals("VAL", useOptional.getUserNameToUpperCaseFromDatabase("Val").get());
-		Assert.assertFalse(useOptional.getUserNameToUpperCaseFromDatabase("Toto").isPresent());
+	public void findUserNameToCapitalLetter() {
+		Assert.assertTrue("Uppercase Val should be present.", useOptional.getUserNameToUpperCaseFromDatabase("Val").isPresent());
+		Assert.assertEquals("Uppercase Val.", "VAL", useOptional.getUserNameToUpperCaseFromDatabase("Val").get());
+		Assert.assertFalse("Uppercase Toto should not be present.", useOptional.getUserNameToUpperCaseFromDatabase("Toto").isPresent());
 	}
 }
