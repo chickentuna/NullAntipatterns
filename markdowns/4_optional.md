@@ -6,7 +6,7 @@ If you're interested in Functional Programming, you may have guessed that Option
 
 You can check if the Optional contains a value with the `isPresent()` method.
 
-An instance of Optional can be created from a potentianally null object with the `ofNullable()` method.
+An instance of Optional can be created from a potentianally null object with the `ofNullable(value)` method.
 
 How is this helpful? Well, now you can perform an operation on your Optional object without needing to check if a value exists first by using the `map()` method.
 

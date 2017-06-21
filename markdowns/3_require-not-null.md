@@ -1,7 +1,7 @@
 
 # Require non null parameters
 
-One of the first things you can do to avoid null-related problems is to require that given values be not null by using the static method `Objects.requireNonNull()`. 
+One of the first things you can do to avoid null-related problems is to require that given values be not null by using the static method `Objects.requireNonNull(variable, errorMessage)`.
 
 Without this, your code will have to check for null every time the given value should be used, which is error-prone and confusing. If a null manages to slip into your code, your program may start behaving in mysterious and unexpected ways.
 
