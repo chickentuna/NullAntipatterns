@@ -1,7 +1,5 @@
 # Welcome!
 
-The source code is on [GitHub](https://github.com/chickentuna/NullAntipatterns), please feel free to come up with proposals to improve it.
-
 In this playground, we will see how Java's `null` value should always be avoided and what solutions exist to bypass it.
 
 # The null problem
@@ -19,7 +17,7 @@ A typical confusion situation:
 ```java
 Man findABrotherInLawOf(Man user) {
     Man anyBrotherInLaw = null;
-    Wife userWife = user.getWife();
+    Woman userWife = user.getWife();
 
     if (userWife != null) {
         List<Man> brothers = userWife.getBrothers();
@@ -36,7 +34,7 @@ Man findABrotherInLawOf(Man user) {
     return anyBrotherInLaw;
 }
 ```
-So many nulls! And this code still has the potential to crash because of a runtime null error. What if `user` turns out to be null? Should it be necessary to check if `brothers` is null? Isn't there a simpler way to write this piece of code and make it easier to both maintain and read? 
+So many nulls! And this code still has the potential to crash because of a runtime null error. What if `user` turns out to be null? Should it be necessary to check if `brothers` is null? Isn't there a simpler way to write this piece of code and make it easier to both maintain and read?
 
 **Absolutely.**
 
@@ -50,3 +48,5 @@ phoneNumbers.get("Alice") // null, because Alice is unknown
 It wouldn't be so bad if the compiler could warn you when you risk a NullPointerException due to bad null handling. However, it will only ever crash at runtime and, more often than not, slap bang in the middle of some code very far away from the source of the problem.
 
 Let's take a look at how to avoid the more common null-based problems 🐛.
+
+The full source and code of this course [GitHub](https://github.com/chickentuna/NullAntipatterns), please feel free to come up with proposals to improve it.
