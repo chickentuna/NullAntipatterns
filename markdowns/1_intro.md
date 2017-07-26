@@ -48,4 +48,4 @@ It wouldn't be so bad if the compiler could warn you when you risk a NullPointer
 
 Let's take a look at how to avoid the more common null-based problems 🐛.
 
-The full source and code of this course [GitHub](https://github.com/chickentuna/NullAntipatterns). Please feel free to come up with proposals to improve it.
+The full source and code of this course is available on [GitHub](https://github.com/chickentuna/NullAntipatterns). Please feel free to come up with proposals to improve it.
