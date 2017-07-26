@@ -2,8 +2,7 @@
 
 Java 8 includes a nifty new class which was made specifically to manage **missing** values. It is a wrapper class which contains either an instance of the given class or a null value. Therefore, it is possible to manipulate null values as if they were normal instances without necessarily having to perform a null check at every step.
 
-If you're versed in Functional Programming, you may have guessed that Optional is the Java implementation of a _maybe monad_ as illustrated below.
-![Maybe](/markdowns/img/maybe.png "Maybe monad example")
+If you're versed in Functional Programming, you may have guessed that Optional is the Java implementation of a _maybe monad_.
 
 You can check if the Optional contains a value with the `isPresent()` method.
 
