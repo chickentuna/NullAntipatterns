@@ -7,7 +7,7 @@ public class NonNull {
 // }
 /**
  * This method requires a non null String
- * A NullPointerException will be thrown if it not the case. However, take a look at the line where the NPE would occur.
+ * A NullPointerException will be thrown if this is not the case. However, take a look at the line where the NPE would occur.
  */
 public static boolean containsVowels(String word) {
     // TODO make sure word is not null with requireNonNull().
